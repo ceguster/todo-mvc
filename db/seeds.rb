@@ -8,4 +8,12 @@
 
 #boards
 boards = Board.create([{name: 'Cetera'}, {name: 'ShindigIt'}])
-r
+
+#Cetera lists
+  List.create(name: 'Reviews', board: boards.first)
+  List.create(name: 'Messaging', board: boards.first)
+  List.create(name: 'Feature Ideas', board: boards.first)
+
+#ShindigIt lists
+  List.create(name: 'General Contributions', board: boards.last)
+  List.create(name: 'Feature Ideas', board: boards.last )
