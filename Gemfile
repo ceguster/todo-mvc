@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'slim-rails', '~> 3.0.1'
+
 #Because of error with rake migrate
 gem 'arel', '6.0.0.beta2'
 
