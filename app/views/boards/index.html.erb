@@ -1,0 +1,5 @@
+<h1>My Boards</h1><br>
+
+<% @boards.each do |b| %>
+  <h3><%= link_to "#{b.name}", board_path(b) %></h3>
+<% end %>
