@@ -1,1 +1,9 @@
 <h1><%= @board.name %></h1>
+
+<% @board.lists.each do |l| %>
+  <header>
+    <h1><%= l.name %></h1>
+  </header>
+<% end %>
+
+<%= link_to "Return to My Boards", root_path %>

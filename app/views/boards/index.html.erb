@@ -1,5 +1,12 @@
 <h1>My Boards</h1><br>
 
-<% @boards.each do |b| %>
-  <h3><%= link_to "#{b.name}", board_path(b) %></h3>
-<% end %>
+<ul>
+  <% @boards.each do |b| %>
+    <h2><li><%= link_to "#{b.name}", board_path(b) %></li></h2>
+  <% end %>
+</ul>
+
+<h2>Create New Board</h2>
+  <%= form_for @board do |f| %>
+    <%= f.text_field :name, id: 'new-todo', placeholder: 'e.g., Projects, etc.' %><br>
+    <% end %>
