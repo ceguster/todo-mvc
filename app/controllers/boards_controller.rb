@@ -6,10 +6,8 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board = Board.new(board_params)
-    @board.save
-
-    redirect_to board_path(@board.id)
+    @board = Board.create(board_params)
+    redirect_to board_path(@board)
   end
 
   def show
@@ -26,6 +24,13 @@ class BoardsController < ApplicationController
     @board.save
 
     redirect_to @board
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy
+
+    redirect_to root_path
   end
 
   private

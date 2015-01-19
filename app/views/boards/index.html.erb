@@ -2,7 +2,10 @@
 
 <ul>
   <% @boards.each do |b| %>
-    <h2><li><%= link_to "#{b.name}", board_path(b) %></li></h2>
+    <h2>
+      <li><%= link_to "#{b.name}", board_path(b) %>   <%= button_to "x", board_path(b), method: "delete" %></li>
+        
+    </h2>
   <% end %>
 </ul>
 
