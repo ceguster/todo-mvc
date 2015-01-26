@@ -1,3 +1,4 @@
+require 'pry'
 class BoardsController < ApplicationController
 
   def index
@@ -30,7 +31,10 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
     @board.destroy
 
-    redirect_to root_path
+    respond_to do |f|
+      f.js {}
+    end
+    
   end
 
   private
