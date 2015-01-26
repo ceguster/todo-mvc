@@ -1,4 +1,3 @@
-require 'pry'
 class BoardsController < ApplicationController
 
   def index
@@ -30,11 +29,6 @@ class BoardsController < ApplicationController
   def destroy
     @board = Board.find(params[:id])
     @board.destroy
-
-    respond_to do |f|
-      f.js {}
-    end
-    
   end
 
   private
