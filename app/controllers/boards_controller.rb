@@ -9,10 +9,10 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
     @board.save
 
-    respond_to do |f|
-      f.js {}
-    end
+    redirect_to @board
   end
+
+
 
   def show
     @board = Board.find(params[:id])

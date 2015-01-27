@@ -3,17 +3,18 @@
 <div class="new-board-form">
   <h2>Create New Board</h2>
     <%= form_for @board do |f| %>
-      <%= f.text_field :name, id: 'new-todo', placeholder: 'e.g., Projects, etc.', remote: true %><br>
+      <%= f.text_field :name, id: 'new-todo', placeholder: 'e.g., Projects, etc.' %>
+      <%= f.submit %>
       <% end %>
 </div>
 
 <div class="all-boards-list">
   <ul id="all-boards-list">
-    <% @boards.each do |board| %>
-      <h2>
-        <li id="li-<%= board.id %>"><%= link_to "#{board.name}", board_path(board) %>   <%= button_to "x", board_path(board), method: "delete", remote: true %></li>
-      </h2>
-    <% end %>
+    <h2>
+      <% @boards.each do |board| %>
+          <li id="li-<%= board.id %>"><%= link_to "#{board.name}", board_path(board) %>   <%= button_to "x", board_path(board), method: "delete", remote: true %></li>
+      <% end %>
+    </h2>
   </ul>
 </div>
 

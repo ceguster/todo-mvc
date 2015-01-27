@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   resources :boards
-  resources :lists do
-    resources :items
-  end
+  # resources :lists do
+  #   resources :items
+  # end
 
-  root 'boards#index'
+  root to: 'boards#index'
 
   
   # The priority is based upon order of creation: first created -> highest priority.
