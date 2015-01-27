@@ -3,7 +3,7 @@
 <div class="new-board-form">
   <h2>Create New Board</h2>
     <%= form_for @board do |f| %>
-      <%= f.text_field :name, id: 'new-todo', placeholder: 'e.g., Projects, etc.' %><br>
+      <%= f.text_field :name, id: 'new-todo', placeholder: 'e.g., Projects, etc.', remote: true %><br>
       <% end %>
 </div>
 

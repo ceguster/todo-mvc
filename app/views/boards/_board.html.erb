@@ -1,0 +1,3 @@
+<h2>
+  <li id="li-<%= board.id %>"><%= link_to "#{board.name}", board_path(board) %>   <%= button_to "x", board_path(board), method: "delete", remote: true %></li>
+</h2>

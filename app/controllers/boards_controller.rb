@@ -6,8 +6,12 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board = Board.create(board_params)
-    redirect_to board_path(@board)
+    @board = Board.new(board_params)
+    @board.save
+
+    respond_to do |f|
+      f.js {}
+    end
   end
 
   def show
