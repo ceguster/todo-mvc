@@ -1,9 +1,8 @@
+## NOT THIS APP!!
 Rails.application.routes.draw do
 
   resources :boards
-  # resources :lists do
-  #   resources :items
-  # end
+  
 
   root to: 'boards#index'
 
